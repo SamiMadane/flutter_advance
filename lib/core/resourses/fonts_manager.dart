@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advance/core/util/size_util.dart';
 
-class ManagerFontWeight {
+class FontWeightManager {
   static const FontWeight regular = FontWeight.w400;
   static const FontWeight medium = FontWeight.w500;
   static const FontWeight semiBold = FontWeight.w600;
   static const FontWeight bold = FontWeight.w700;
 }
 
-class ManagerFontSize {
+class FontSizeManager {
   static double s2 = SizeUtil.setFontSize(2.0);
   static double s4 = SizeUtil.setFontSize(4.0);
   static double s6 = SizeUtil.setFontSize(6.0);
@@ -16,6 +16,7 @@ class ManagerFontSize {
   static double s10 = SizeUtil.setFontSize(10.0);
   static double s11 = SizeUtil.setFontSize(11.0);
   static double s12 = SizeUtil.setFontSize(12.0);
+  static double s13 = SizeUtil.setFontSize(13.0);
   static double s14 = SizeUtil.setFontSize(14.0);
   static double s15 = SizeUtil.setFontSize(15.0);
   static double s16 = SizeUtil.setFontSize(16.0);
@@ -26,6 +27,7 @@ class ManagerFontSize {
   static double s26 = SizeUtil.setFontSize(26.0);
   static double s28 = SizeUtil.setFontSize(28.0);
   static double s30 = SizeUtil.setFontSize(30.0);
+  static double s32 = SizeUtil.setFontSize(32.0);
   static double s35 = SizeUtil.setFontSize(35.0);
   static double s40 = SizeUtil.setFontSize(40.0);
   static double s80 = SizeUtil.setFontSize(80.0);

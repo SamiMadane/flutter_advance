@@ -42,7 +42,7 @@ void main() {
   File('lib/core/resourses/fonts_manager.dart').createSync();
   File('lib/core/resourses/sizes_util_manager.dart').createSync();
   File('lib/core/resourses/styles_manager.dart').createSync();
-  File('lib/core/resourses/assest_manager.dart').createSync();
+  File('lib/core/resourses/assets_manager.dart').createSync();
   File('lib/feature/onboarding/ui/views/onboarding_screen.dart').createSync();
   File('lib/feature/login/ui/views/login_screen.dart').createSync();
 
@@ -85,8 +85,8 @@ class Routes {
   File('lib/feature/onboarding/ui/views/onboarding_screen.dart').writeAsStringSync('''
 import 'package:flutter/material.dart';
 
-class OnBoardingScreen extends StatelessWidget {
-  const OnBoardingScreen({super.key});
+class OnboardingScreen extends StatelessWidget {
+  const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -179,11 +179,11 @@ TextStyle getRegularTextStyle({
 }) {
   return _getTextStyle(
     fontSize,
-    ManagerFontWeight.regular,
+    FontWeightManager.regular,
     color,
     decoration,
     overflow,
-    height!,
+    height ?? 1.0,
   );
 }
 
@@ -197,11 +197,11 @@ TextStyle getMediumTextStyle({
 }) {
   return _getTextStyle(
     fontSize,
-    ManagerFontWeight.medium,
+    FontWeightManager.medium,
     color,
     decoration,
     overflow,
-    height!,
+    height ?? 1.0,
   );
 }
 
@@ -215,11 +215,11 @@ TextStyle getSemiBoldTextStyle({
 }) {
   return _getTextStyle(
     fontSize,
-    ManagerFontWeight.semiBold,
+    FontWeightManager.semiBold,
     color,
     decoration,
     overflow,
-    height!,
+    height ?? 1.0,
   );
 }
 
@@ -233,11 +233,11 @@ TextStyle getBoldTextStyle({
 }) {
   return _getTextStyle(
     fontSize,
-    ManagerFontWeight.bold,
+    FontWeightManager.bold,
     color,
     decoration,
     overflow,
-    height!,
+    height ?? 1.0,
   );
 }
 
@@ -247,7 +247,7 @@ TextStyle getBoldTextStyle({
 
 import '../util/size_util.dart';
 
-class ManagerRadius {
+class RadiusManager {
   static double r2 = SizeUtil.setRadius(2.0);
   static double r4 = SizeUtil.setRadius(4.0);
   static double r6 = SizeUtil.setRadius(6.0);
@@ -269,7 +269,7 @@ class ManagerRadius {
   static double r100 = SizeUtil.setRadius(100.0);
 }
 
-class ManagerWidth {
+class WidthManager {
   static double w0_9 = SizeUtil.setWidth(0.9);
   static double w1 = SizeUtil.setWidth(1.0);
   static double w1_5 = SizeUtil.setWidth(1.5);
@@ -303,7 +303,7 @@ class ManagerWidth {
 
 }
 
-class ManagerHeight {
+class HeightManager {
   static double h1 = SizeUtil.setHeight(1.0);
   static double h2 = SizeUtil.setHeight(2.0);
   static double h4 = SizeUtil.setHeight(4.0);
@@ -338,7 +338,7 @@ class ManagerHeight {
 
 }
 
-class ManagerIconSize {
+class IconSizeManager {
   static double s2 = 2;
   static double s4 = 4;
   static double s6 = 6;
@@ -348,7 +348,7 @@ class ManagerIconSize {
   static double s14 = 14;
 }
 
-class ManagerOpacity {
+class OpacityManager {
   static double Op_0_3 = 0.3;
   static double Op_0_5 = 0.5;
   static double Op_0_0_5 = 0.05;
@@ -367,14 +367,14 @@ class ConstantSize {
 import 'package:flutter/material.dart';
 import 'package:flutter_advance/core/util/size_util.dart';
 
-class ManagerFontWeight {
+class FontWeightManager {
   static const FontWeight regular = FontWeight.w400;
   static const FontWeight medium = FontWeight.w500;
   static const FontWeight semiBold = FontWeight.w600;
   static const FontWeight bold = FontWeight.w700;
 }
 
-class ManagerFontSize {
+class FontSizeManager {
   static double s2 = SizeUtil.setFontSize(2.0);
   static double s4 = SizeUtil.setFontSize(4.0);
   static double s6 = SizeUtil.setFontSize(6.0);
@@ -437,7 +437,7 @@ class DocApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(ManagerHeight.h375, ManagerWidth.w812),
+      designSize: Size(HeightManager.h375, WidthManager.w812),
       minTextAdapt: true,
       child: MaterialApp(
         title: 'Doc App',
