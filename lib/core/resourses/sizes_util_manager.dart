@@ -54,8 +54,6 @@ class ManagerWidth {
   static double w76 = SizeUtil.setWidth(76.0);
   static double w80 = SizeUtil.setWidth(80.0);
   static double w100 = SizeUtil.setWidth(100.0);
-  static double w812 = SizeUtil.setWidth(812.0);
-
 }
 
 class ManagerHeight {
@@ -89,8 +87,6 @@ class ManagerHeight {
   static double h80 = SizeUtil.setHeight(80.0);
   static double h90 = SizeUtil.setHeight(90.0);
   static double h100 = SizeUtil.setHeight(100.0);
-  static double h375 = SizeUtil.setHeight(375.0);
-
 }
 
 class ManagerIconSize {
