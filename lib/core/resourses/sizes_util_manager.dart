@@ -2,7 +2,7 @@
 
 import '../util/size_util.dart';
 
-class ManagerRadius {
+class RadiusManager {
   static double r2 = SizeUtil.setRadius(2.0);
   static double r4 = SizeUtil.setRadius(4.0);
   static double r6 = SizeUtil.setRadius(6.0);
@@ -24,7 +24,8 @@ class ManagerRadius {
   static double r100 = SizeUtil.setRadius(100.0);
 }
 
-class ManagerWidth {
+class WidthManager {
+  static double w0 = SizeUtil.setWidth(0.0);
   static double w0_9 = SizeUtil.setWidth(0.9);
   static double w1 = SizeUtil.setWidth(1.0);
   static double w1_5 = SizeUtil.setWidth(1.5);
@@ -58,8 +59,9 @@ class ManagerWidth {
 
 }
 
-class ManagerHeight {
+class HeightManager {
   static double h1 = SizeUtil.setHeight(1.0);
+  static double h1_3 = SizeUtil.setHeight(1.3);
   static double h2 = SizeUtil.setHeight(2.0);
   static double h4 = SizeUtil.setHeight(4.0);
   static double h6 = SizeUtil.setHeight(6.0);
@@ -93,7 +95,7 @@ class ManagerHeight {
 
 }
 
-class ManagerIconSize {
+class IconSizeManager {
   static double s2 = 2;
   static double s4 = 4;
   static double s6 = 6;
@@ -103,10 +105,8 @@ class ManagerIconSize {
   static double s14 = 14;
 }
 
-class ManagerOpacity {
-  static double Op_0_3 = 0.3;
-  static double Op_0_5 = 0.5;
-  static double Op_0_0_5 = 0.05;
+class OpacityManager {
+  static double op_0_0 = 0.0;
 }
 
 class ConstantSize {

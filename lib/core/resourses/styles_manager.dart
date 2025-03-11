@@ -29,11 +29,11 @@ TextStyle getRegularTextStyle({
 }) {
   return _getTextStyle(
     fontSize,
-    ManagerFontWeight.regular,
+    FontWeightManager.regular,
     color,
     decoration,
     overflow,
-    height!,
+    height ?? 1.0,
   );
 }
 
@@ -47,11 +47,11 @@ TextStyle getMediumTextStyle({
 }) {
   return _getTextStyle(
     fontSize,
-    ManagerFontWeight.medium,
+    FontWeightManager.medium,
     color,
     decoration,
     overflow,
-    height!,
+    height ?? 1.0,
   );
 }
 
@@ -65,11 +65,11 @@ TextStyle getSemiBoldTextStyle({
 }) {
   return _getTextStyle(
     fontSize,
-    ManagerFontWeight.semiBold,
+    FontWeightManager.semiBold,
     color,
     decoration,
     overflow,
-    height!,
+    height ?? 1.0,
   );
 }
 
@@ -83,11 +83,11 @@ TextStyle getBoldTextStyle({
 }) {
   return _getTextStyle(
     fontSize,
-    ManagerFontWeight.bold,
+    FontWeightManager.bold,
     color,
     decoration,
     overflow,
-    height!,
+    height ?? 1.0,
   );
 }
 
