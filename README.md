@@ -10,3 +10,10 @@
 ```sh
 dart run structure_project.dart
 
+2. To run flutter native splash ( if it outside pubspec.yaml ), use the following command: ✍️
+```sh
+dart run flutter_native_splash:create --path=flutter_native_splash.yaml
+
+3. To run flutter native splash ( if it inside pubspec.yaml ), use the following command: ✍️
+```sh
+dart run flutter_native_splash:create
