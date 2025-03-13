@@ -4,7 +4,6 @@ import 'package:flutter_advance/core/resourses/fonts_manager.dart';
 import 'package:flutter_advance/core/resourses/sizes_util_manager.dart';
 import 'package:flutter_advance/core/resourses/styles_manager.dart';
 import 'package:flutter_advance/core/widgets/app_text_button.dart';
-import 'package:flutter_advance/feature/login/data/models/login_request_body.dart';
 import 'package:flutter_advance/feature/login/logic/cubit/login_cubit.dart';
 import 'package:flutter_advance/feature/login/ui/widgets/dont_have_account_text.dart';
 import 'package:flutter_advance/feature/login/ui/widgets/email_and_password.dart';
