@@ -23,7 +23,7 @@ class DoctorsListView extends StatelessWidget {
                   child: Image.network(
                     width: WidthManager.w100,
                     height: HeightManager.h100,
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2qDuoEnmp2U_VRFIcUpA7D67aDBHWipZ3yg&s',
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWjwYSYjlzyrnNwk7mYkNNj2rm04BVlGlQuw&s',
                     fit: BoxFit.cover,
                   ),
                 ),
