@@ -5,6 +5,8 @@ import 'package:flutter_advance/feature/home/ui/views/home_screen.dart';
 import 'package:flutter_advance/feature/login/logic/cubit/login_cubit.dart';
 import 'package:flutter_advance/feature/login/ui/views/login_screen.dart';
 import 'package:flutter_advance/feature/onboarding/ui/views/onboarding_screen.dart';
+import 'package:flutter_advance/feature/signup/logic/cubit/sign_up_cubit.dart';
+import 'package:flutter_advance/feature/signup/ui/views/signup.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouter {
@@ -14,20 +16,25 @@ class AppRouter {
 
     switch (settings.name) {
       case Routes.onBoardingScreen:
-        return MaterialPageRoute(
-          builder: (_) => const OnboardingScreen(),
-        );
+        return MaterialPageRoute(builder: (_) => const OnboardingScreen());
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => getIt<LoginCubit>(),
-            child: const LoginScreen(),
-          ),
+          builder:
+              (_) => BlocProvider(
+                create: (context) => getIt<LoginCubit>(),
+                child: const LoginScreen(),
+              ),
         );
-        case Routes.homeScreen:
+      case Routes.signUpScreen:
         return MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
+          builder:
+              (_) => BlocProvider(
+                create: (context) => getIt<SignupCubit>(),
+                child: const SignupScreen(),
+              ),
         );
+      case Routes.homeScreen:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       default:
         return null;
     }

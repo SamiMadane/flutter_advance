@@ -3,6 +3,8 @@ import 'package:flutter_advance/core/networking/api_service.dart';
 import 'package:flutter_advance/core/networking/dio_factory.dart';
 import 'package:flutter_advance/feature/login/data/repository/login_repo.dart';
 import 'package:flutter_advance/feature/login/logic/cubit/login_cubit.dart';
+import 'package:flutter_advance/feature/signup/data/repository/sign_up_repo.dart';
+import 'package:flutter_advance/feature/signup/logic/cubit/sign_up_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 // GetIt => class dependency injection (files depend on each other).
@@ -18,4 +20,8 @@ Future<void> setupGetIt() async {
   // registerFactory is used to create a new instance of the object
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt()));
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt()));
+
+  // Signup
+  getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
+  getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
 }
