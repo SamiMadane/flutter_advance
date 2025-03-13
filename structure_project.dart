@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   final directories = [
-    'lib/core/database',
+    'lib/core/networking',
     'lib/core/di',
     'lib/core/themes',
     'lib/core/routes',
