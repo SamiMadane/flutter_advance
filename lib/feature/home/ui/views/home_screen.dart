@@ -5,6 +5,7 @@ import 'package:flutter_advance/feature/home/ui/widgets/doctors_list_view.dart';
 import 'package:flutter_advance/feature/home/ui/widgets/doctors_speciality_list_view.dart';
 import 'package:flutter_advance/feature/home/ui/widgets/doctors_speciality_see_all.dart';
 import 'package:flutter_advance/feature/home/ui/widgets/home_top_bar.dart';
+import 'package:flutter_advance/feature/home/ui/widgets/specializations_and_doctors_bloc_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -30,9 +31,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: HeightManager.h24),
               const DoctorsSpecialitySeeAll(),
               SizedBox(height: HeightManager.h18),
-              const DoctorsSpecialityListView(),
-              SizedBox(height: HeightManager.h8),
-              const DoctorsListView(),
+              const SpecializationsAndDoctorsBlocBuilder(),
             ],
           ),
         ),
