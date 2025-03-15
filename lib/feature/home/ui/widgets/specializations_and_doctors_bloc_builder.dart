@@ -39,9 +39,13 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
   }
 
   Widget setupLoading() {
-    return const SizedBox(
-      height: 100,
-      child: Center(child: CircularProgressIndicator()),
+    return Expanded(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(child: CircularProgressIndicator()),
+        ],
+      ),
     );
   }
 
