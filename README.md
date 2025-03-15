@@ -21,7 +21,7 @@ dart run flutter_native_splash:create --path=flutter_native_splash.yaml
 dart run flutter_native_splash:create
 ```
 
-4. If you are using models with the `@JsonSerializable()` or `@Freezed()` or `@RestApi()` annotation, run the following command to generate the necessary code:
+4. If you are using models with the `@JsonSerializable()` or `@Freezed()` or `@RestApi()` annotation, run the following command to generate the necessary code:✍️
 ```bash
    flutter pub run build_runner build --delete-conflicting-outputs
 ```

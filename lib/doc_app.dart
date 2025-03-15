@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advance/core/helpers/constants.dart';
 import 'package:flutter_advance/core/resourses/colors_manager.dart';
 import 'package:flutter_advance/core/resourses/sizes_util_manager.dart';
 import 'package:flutter_advance/core/routes/app_router.dart';
@@ -21,7 +22,7 @@ class DocApp extends StatelessWidget {
           scaffoldBackgroundColor: ColorsManager.white,
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.homeScreen,
+        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.loginScreen,
         onGenerateRoute: appRouter.generateRoute,
       )
     );
