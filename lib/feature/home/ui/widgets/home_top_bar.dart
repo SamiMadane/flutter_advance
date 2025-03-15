@@ -21,6 +21,7 @@ class HomeTopBar extends StatelessWidget {
               'Hi, Sami!',
               style: getBoldTextStyle(fontSize: FontSizeManager.s18, color: ColorsManager.darkBlue),
             ),
+            SizedBox(height: HeightManager.h6,),
             Text(
               'How Are you Today?',
               style: getRegularTextStyle(fontSize: FontSizeManager.s12, color: ColorsManager.gray),
