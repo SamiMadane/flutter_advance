@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advance/core/resourses/sizes_util_manager.dart';
 import 'package:flutter_advance/feature/home/ui/widgets/doctors_blue_container.dart';
-import 'package:flutter_advance/feature/home/ui/widgets/doctors_list_view.dart';
-import 'package:flutter_advance/feature/home/ui/widgets/doctors_speciality_list_view.dart';
+import 'package:flutter_advance/feature/home/ui/widgets/doctors_list/doctors_bloc_builder.dart';
 import 'package:flutter_advance/feature/home/ui/widgets/doctors_speciality_see_all.dart';
 import 'package:flutter_advance/feature/home/ui/widgets/home_top_bar.dart';
-import 'package:flutter_advance/feature/home/ui/widgets/specializations_and_doctors_bloc_builder.dart';
+import 'package:flutter_advance/feature/home/ui/widgets/speciality_list/specializations_bloc_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -31,7 +30,11 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: HeightManager.h24),
               const DoctorsSpecialitySeeAll(),
               SizedBox(height: HeightManager.h18),
-              const SpecializationsAndDoctorsBlocBuilder(),
+              const SpecializationsBlocBuilder(),
+              SizedBox(height: HeightManager.h8),
+              const DoctorsBlocBuilder(),
+
+
             ],
           ),
         ),
