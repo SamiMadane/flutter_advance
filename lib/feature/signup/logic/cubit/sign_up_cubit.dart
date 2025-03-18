@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advance/core/networking/api_error_model.dart';
 import 'package:flutter_advance/feature/signup/data/models/sign_up_request_body.dart';
 import 'package:flutter_advance/feature/signup/data/repository/sign_up_repo.dart';
 import 'package:flutter_advance/feature/signup/logic/cubit/sign_up_state.dart';
@@ -31,8 +32,8 @@ class SignupCubit extends Cubit<SignupState> {
     );
     response.when(success: (signupResponse) {
       emit(SignupState.signupSuccess(signupResponse));
-    }, failure: (error) {
-      emit(SignupState.signupError(error: error.apiErrorModel.message ?? ''));
+    }, failure: (apiErrorModel) {
+      emit(SignupState.signupError(apiErrorModel));
     });
   }
 }
