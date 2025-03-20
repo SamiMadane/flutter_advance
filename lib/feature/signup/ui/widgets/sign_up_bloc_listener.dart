@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advance/core/helpers/extensions.dart';
+import 'package:flutter_advance/core/networking/api_error_model.dart';
 import 'package:flutter_advance/core/resourses/colors_manager.dart';
 import 'package:flutter_advance/core/resourses/fonts_manager.dart';
 import 'package:flutter_advance/core/resourses/styles_manager.dart';
@@ -35,8 +36,8 @@ class SignupBlocListener extends StatelessWidget {
             context.pop();
             showSuccessDialog(context);
           },
-          signupError: (error) {
-            setupErrorState(context, error);
+          signupError: (apiErrorModel) {
+            setupErrorState(context, apiErrorModel);
           },
         );
       },
@@ -73,7 +74,7 @@ class SignupBlocListener extends StatelessWidget {
     );
   }
 
-  void setupErrorState(BuildContext context, String error) {
+  void setupErrorState(BuildContext context, ApiErrorModel apiErrorModel) {
     context.pop();
     showDialog(
       context: context,
@@ -84,7 +85,7 @@ class SignupBlocListener extends StatelessWidget {
           size: 32,
         ),
         content: Text(
-          error,
+          apiErrorModel.getAllErrorMessages(),
           style: getMediumTextStyle(fontSize: FontSizeManager.s15, color: ColorsManager.darkBlue),
         ),
         actions: [
